@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <div id="restart_load"></div>
+    <div id="power_off_load"></div>
+    <div class="login">
+        <form>
+            <img src="../MEDIA/IMAGE/user.jpg" alt=""><br><br>
+            <label for="Admin">ADMIN</label><br><br>
+            <input type="password" id="pwd"><br><br>
+            <p id="text" style="color: red; font-size:20px;">&nbsp;</p><br>
+            <button onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="left">
+            <input type="button" id="power_btn" onclick="powerOptions()" value="Power">
+            <input type="button" id="restart" onclick="restart()" value="Restart">
+            <input type="button" id="shutDown" onclick="powerOff()" value="Power Off">
+        </div>
+        <div class="right">
+            <p id="date_time"></p>
+        </div>
+    </div>
+
+    <script src="../JS/login.js"></script>
+</body>
+</html>

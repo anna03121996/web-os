@@ -1,0 +1,80 @@
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../MEDIA/IMAGE/login_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.login{
+    position:absolute;
+    margin-top: 50%;
+    left: 45%;
+}
+form label{
+    font-size: 30px;
+    color: aliceblue;
+}
+form img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+#pwd{
+    height: 25px;
+    width: 250px;
+    border-radius: 30px;
+    border: 3px solid rgba(0, 0, 0, 0.495);
+    background-color: rgba(240, 248, 255, 0);
+}
+#pwd:focus{
+    outline: none;
+}
+form button{
+    background-color: rgba(95, 158, 160, 0);
+    border-color:rgba(255, 0, 0, 0);
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+.left{
+    display: flex;
+    justify-content: space-around;
+}
+.left input{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: pink;
+    margin-right: 20px;
+    padding: 0 30px;
+}
+.left input:hover{
+    color: white;
+}
+.left input:nth-child(1):hover{
+    color: black;
+}
+.left input:nth-child(2),input:nth-child(3){
+    display: none;
+}
+.left input:nth-child(2):hover, input:nth-child(3):hover{
+    color: salmon;
+}
+#date_time{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin: 5px 25px;
+}
