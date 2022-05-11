@@ -1,8 +1,16 @@
 let pow = document.getElementsByClassName("login");
 let res = document.getElementsByClassName("footer");
+let bod = document.getElementsByTagName("body");
+
 function powerOff(){
     pow[0].style.display="none";
     res[0].style.display="none";
+    bod[0].style.backgroundImage="url('../MEDIA/IMAGE/loading_image.jpg')";
+    bod[0].style.backgroundRepeat="no-repeat";
+    bod[0].style.backgroundSize="cover";
+    // bod[0].style.filter="blur(8px)";
+    // bod[0].style[-webkit-filter]="blur(8px)";
+    // //-webkit-filter: blur(8px);
     function goBack(){
         window.open("../HTML/power.html","_self");
     }
@@ -11,6 +19,11 @@ function powerOff(){
 function restart(){
     pow[0].style.display="none";
     res[0].style.display="none";
+    bod[0].style.backgroundImage="url('../MEDIA/IMAGE/loading_image.jpg')";
+    bod[0].style.backgroundRepeat="no-repeat";
+    bod[0].style.backgroundSize="cover";
+    // bod[0].style.filter="blur(50px)";
+    // bod[0].style[-webkit-filter]="blur(8px)";
     function reloadFunction(){
         location.reload();
     }
@@ -19,7 +32,7 @@ function restart(){
 function login(){
     let pw = document.getElementById("pwd").value;
     if(pw == "admin"){
-        window.open("../HTML/desktop.html");
+        setTimeout((window.open("../HTML/desktop.html")),3000);
     }else{
         alert("wrong password");
     }
