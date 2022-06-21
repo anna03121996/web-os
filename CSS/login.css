@@ -4,7 +4,6 @@ body{
     justify-content: center;
     align-items: center;
     background-image: url("../MEDIA/IMAGE/login_bg.jpg");
-    /* background-image: url("../MEDIA/IMAGE/loading_image.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
 }
