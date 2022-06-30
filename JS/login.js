@@ -21,6 +21,7 @@ function login(){
     }
     else{
         alert("error");
+        window.open("./login.html","_self");
     }
 }
 
