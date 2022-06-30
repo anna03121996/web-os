@@ -16,13 +16,7 @@ function restart(){
 function login(){
     let userName = document.getElementById("user_name").value;
     if(userName != ""){
-        userName == "";
         localStorage.setItem("userName", userName);
-
-        function loginLoad(){
-            window.open("../HTML/desktop.html","_self");
-        }
-        setTimeout(loginLoad,3000);
     }
     else{
         alert("error");
