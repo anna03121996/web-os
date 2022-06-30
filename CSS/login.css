@@ -75,11 +75,11 @@ form button:hover{
     color: red;
     font-size: 30px;
 }
-.left button:nth-child(2),button:nth-child(3){
+.left button:nth-child(2){
     display: none;
 }
 #date_time{
-    color: black;
+    color: red;
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
     margin: 5px 25px;

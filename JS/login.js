@@ -8,8 +8,6 @@ function restart(){
     bod[0].style.backgroundImage="url('../MEDIA/IMAGE/loading_image.jpg')";
     bod[0].style.backgroundRepeat="no-repeat";
     bod[0].style.backgroundSize="cover";
-    // bod[0].style.filter="blur(50px)";
-    // bod[0].style[-webkit-filter]="blur(8px)";
     function reloadFunction(){
         location.reload();
     }
@@ -18,10 +16,9 @@ function restart(){
 function login(){
     let userName = document.getElementById("user_name").value;
     if(userName != ""){
+        userName == "";
         localStorage.setItem("userName", userName);
         window.open("../HTML/desktop.html","_self");
-        // window.open("../HTML/desktop.html","_self");
-        // window.close();
     }
     else{
         alert("error");
@@ -33,11 +30,9 @@ function powerOptions(){
     num++;
     if(num%2 == 0){
         document.getElementById("restart").style.display="block";
-        document.getElementById("shutDown").style.display="block";
     }
     else{
         document.getElementById("restart").style.display="none";
-        document.getElementById("shutDown").style.display="none";
     }
 }
 function dateAndTime(){

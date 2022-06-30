@@ -1,6 +1,30 @@
 let user_name = localStorage.getItem("userName");
 console.log(user_name);
 
+let res = document.getElementsByClassName("footer");
+let bod = document.getElementsByTagName("body");
+
+function restart(){
+    res[0].style.display="none";
+    bod[0].style.backgroundImage="url('../MEDIA/IMAGE/loading_image.jpg')";
+    bod[0].style.backgroundRepeat="no-repeat";
+    bod[0].style.backgroundSize="cover";
+    function reloadFunction(){
+        location.reload();
+    }
+    setTimeout(reloadFunction,3000);
+}
+
+let num = 1;
+function powerOptions(){
+    num++;
+    if(num%2 == 0){
+        document.getElementById("restart").style.display="block";
+    }
+    else{
+        document.getElementById("restart").style.display="none";
+    }
+}
 function dateAndTime(){
     let dateTime = new Date();
     let weekDaysArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
