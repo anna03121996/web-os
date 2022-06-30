@@ -11,10 +11,10 @@
     <h3 id="restart_load"></h3>
     <h3 id="power_off_load"></h3>
     <div class="login">
-        <form>
+        <form action="./desktop.html">
             <img src="../MEDIA/IMAGE/user.jpg" alt=""><br><br>
-            <label for="Admin">ADMIN</label><br><br>
-            <input type="password" id="pwd"><br>
+            <label for="Admin">Enter User Name</label><br><br>
+            <input type="text" id="user_name"><br>
             <p id="text" style="color: red; font-size:20px;">&nbsp;</p><br>
             <button onclick="login()">Login</button>
         </form>
@@ -22,9 +22,9 @@
 
     <div class="footer">
         <div class="left">
-            <input type="button" id="power_btn" onclick="powerOptions()" value="Power">
-            <input type="button" id="restart" onclick="restart()" value="Restart">
-            <input type="button" id="shutDown" onclick="powerOff()" value="Power Off">
+            <button type="button" id="power_btn" onclick="powerOptions()">Power</button>
+            <button type="button" id="restart" onclick="restart()">Restart</button>
+            <!-- <button type="button" id="shutDown" onclick="powerOff()">ShutDown</button> -->
         </div>
         <div class="right">
             <p id="date_time"></p>

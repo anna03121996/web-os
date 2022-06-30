@@ -3,3 +3,45 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(211, 246, 58, 0.373);
+}
+.left{
+    display: flex;
+    justify-content: space-around;
+}
+.left button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: pink;
+    margin-right: 20px;
+    padding: 0 30px;
+}
+.left button:hover{
+    color: white;
+}
+.left button:nth-child(1):hover{
+    color: black;
+}
+.left button:nth-child(2),button:nth-child(3){
+    display: none;
+}
+.left button:nth-child(2):hover, button:nth-child(3):hover{
+    color: salmon;
+}
+#date_time{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin: 5px 25px;
+}

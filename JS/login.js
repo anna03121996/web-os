@@ -2,20 +2,6 @@ let pow = document.getElementsByClassName("login");
 let res = document.getElementsByClassName("footer");
 let bod = document.getElementsByTagName("body");
 
-function powerOff(){
-    pow[0].style.display="none";
-    res[0].style.display="none";
-    bod[0].style.backgroundImage="url('../MEDIA/IMAGE/loading_image.jpg')";
-    bod[0].style.backgroundRepeat="no-repeat";
-    bod[0].style.backgroundSize="cover";
-    // bod[0].style.filter="blur(8px)";
-    // bod[0].style[-webkit-filter]="blur(8px)";
-    // //-webkit-filter: blur(8px);
-    function goBack(){
-        window.open("../HTML/power.html","_self");
-    }
-    setTimeout(goBack,3000)
-}
 function restart(){
     pow[0].style.display="none";
     res[0].style.display="none";
@@ -30,11 +16,15 @@ function restart(){
     setTimeout(reloadFunction,3000);
 }
 function login(){
-    let pw = document.getElementById("pwd").value;
-    if(pw == "admin"){
-        setTimeout((window.open("../HTML/desktop.html")),3000);
-    }else{
-        alert("wrong password");
+    let userName = document.getElementById("user_name").value;
+    if(userName != ""){
+        localStorage.setItem("userName", userName);
+        window.open("../HTML/desktop.html","_self");
+        // window.open("../HTML/desktop.html","_self");
+        // window.close();
+    }
+    else{
+        alert("error");
     }
 }
 
@@ -59,17 +49,26 @@ function dateAndTime(){
     let mm = monthArr[dateTime.getMonth()];
     let yyyy = dateTime.getFullYear();
     let currentDate = wd + " " + dd + " "+ mm + " "+ yyyy;
+
+    let am_pm;
     let hour = dateTime.getHours();
+    if(hour>12){
+        hour = hour -12;
+        am_pm = "pm";
+    }
+    else{
+        am_pm = "am";
+    }
     let min = dateTime.getMinutes();
     let sec = dateTime.getSeconds();
-    let currentTime = hour +" : " + min +" : " + sec;
+    let currentTime = hour +" : " + min +" : " + sec + " : "+am_pm;
     document.getElementById("date_time").innerHTML= `${currentTime}<br>${currentDate}`;
-    setTimeout(function(){dateAndTime()},1000);
+    setInterval(function(){dateAndTime()},1000);
 }
 dateAndTime();
 
 function capsLockOn(){
-    var input = document.getElementById("pwd");
+    var input = document.getElementById("user_name");
     var text = document.getElementById("text");
     input.addEventListener("keyup", function(event) {
     if (event.getModifierState("CapsLock")) {
