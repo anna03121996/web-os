@@ -18,7 +18,11 @@ function login(){
     if(userName != ""){
         userName == "";
         localStorage.setItem("userName", userName);
-        window.open("../HTML/desktop.html","_self");
+
+        function loginLoad(){
+            window.open("../HTML/desktop.html","_self");
+        }
+        setTimeout(loginLoad,3000);
     }
     else{
         alert("error");
