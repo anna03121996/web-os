@@ -33,7 +33,7 @@ function dateAndTime(){
     let monthArr = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     let mm = monthArr[dateTime.getMonth()];
     let yyyy = dateTime.getFullYear();
-    let currentDate = wd + " " + dd + " "+ mm + " "+ yyyy;
+    let currentDate =` ${wd} - ${dd} - ${mm} - ${yyyy} `;
 
     let am_pm;
     let hour = dateTime.getHours();
@@ -46,7 +46,7 @@ function dateAndTime(){
     }
     let min = dateTime.getMinutes();
     let sec = dateTime.getSeconds();
-    let currentTime = hour +" : " + min +" : " + sec + " : "+am_pm;
+    let currentTime =`${hour} : ${min} : ${sec} : ${am_pm}`;
     document.getElementById("date_time").innerHTML= `${currentTime}<br>${currentDate}`;
     setInterval(function(){dateAndTime()},1000);
 }

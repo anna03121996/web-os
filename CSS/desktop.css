@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 50px;
+    height: auto;
     background-color: rgba(255, 159, 4, 0.373);
 }
 .left{
@@ -31,14 +31,20 @@ body{
     color: red;
     font-size: 30px;
 }
-.left button:nth-child(2),button:nth-child(3){
+.left button:nth-child(2){
     display: none;
 }
 #date_time{
+    padding: 10px 5px 10px 5px;
+    height: auto;
+    width: 200px;
     color: red;
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
     margin: 5px 25px;
     font-size: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("../MEDIA/IMAGE/kratos_bv.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
