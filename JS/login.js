@@ -22,7 +22,7 @@ function login(){
         window.open("./desktop.html","_self");
     }
     else{
-        alert("error");
+        console.log("error");
         location.reload();
     }
 }
@@ -64,13 +64,13 @@ function dateAndTime(){
 dateAndTime();
 
 function capsLockOn(){
-    var input = document.getElementById("user_name");
-    var text = document.getElementById("text");
+    let input = document.getElementById("user_name");
+    let text = document.getElementById("text");
     input.addEventListener("keyup", function(event) {
     if (event.getModifierState("CapsLock")) {
         text.innerHTML = "Caps Lock is On";
     } else {
-            text.innerHTML = "&nbsp;";
+            text.innerHTML = "";
         }
     });
 }
