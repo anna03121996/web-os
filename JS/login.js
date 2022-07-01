@@ -1,4 +1,5 @@
 let userName = document.getElementById("user_name").value;
+let num = 1;
 let pow = document.getElementsByClassName("login");
 let res = document.getElementsByClassName("footer");
 let bod = document.getElementsByTagName("body");
@@ -26,7 +27,6 @@ function login(){
     }
 }
 
-let num = 1;
 function powerOptions(){
     num++;
     if(num%2 == 0){
