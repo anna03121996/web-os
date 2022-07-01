@@ -17,11 +17,11 @@ function restart(){
 }
 function login(){
     
-    if(userName != ""){
+    if(userName.length != 0){
         localStorage.setItem("userName", userName);
         window.open("./desktop.html","_self");
     }
-    else if(userName == ""){
+    else if(userName.length == 0){
         console.log("error");
         location.reload();
     }
@@ -70,7 +70,7 @@ function capsLockOn(){
     if (event.getModifierState("CapsLock")) {
         text.innerHTML = "Caps Lock is On";
     } else {
-            text.innerHTML = "";
+            text.innerHTML = "&nbsp;";
         }
     });
 }
