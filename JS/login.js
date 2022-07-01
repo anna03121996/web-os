@@ -21,7 +21,7 @@ function login(){
         localStorage.setItem("userName", userName);
         window.open("./desktop.html","_self");
     }
-    else{
+    else if(userName == ""){
         console.log("error");
         location.reload();
     }
