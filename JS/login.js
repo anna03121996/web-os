@@ -1,3 +1,4 @@
+let userName = document.getElementById("user_name").value;
 let pow = document.getElementsByClassName("login");
 let res = document.getElementsByClassName("footer");
 let bod = document.getElementsByTagName("body");
@@ -14,14 +15,14 @@ function restart(){
     setTimeout(reloadFunction,3000);
 }
 function login(){
-    let userName = document.getElementById("user_name").value;
+    
     if(userName != ""){
         localStorage.setItem("userName", userName);
         window.open("./desktop.html","_self");
     }
     else{
         alert("error");
-        window.open("./login.html","_self");
+        location.reload();
     }
 }
 
