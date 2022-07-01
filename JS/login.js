@@ -22,8 +22,7 @@ function login(){
         window.open("./desktop.html","_self");
     }
     else if(userName.length == 0){
-        console.log("error");
-        location.reload();
+        userName = "User";
     }
 }
 
